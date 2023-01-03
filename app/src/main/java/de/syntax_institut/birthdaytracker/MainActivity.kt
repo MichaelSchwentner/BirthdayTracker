@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         // TODO hole deinen Button aus dem Layout und speichere ihn in einer Variable
         val button = findViewById<Button>(R.id.calculatorButton_button)
+        // TODO Geburtstagsbild
         var bild = findViewById<ImageView>(R.id.birthday_image)
         bild.visibility = View.INVISIBLE
         // TODO setzte einen On-Click-Listener auf deinen Button und rufe die Methode
@@ -44,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         var nachnameInput = findViewById<EditText>(R.id.nachname_input).text.toString()
         var daySpinner = findViewById<Spinner>(R.id.day_spinner).selectedItem.toString().toInt()
         var monthSpinner = findViewById<Spinner>(R.id.month_spinner).selectedItem.toString()
-
+        // TODO Geburtstagsbild
         var bild = findViewById<ImageView>(R.id.birthday_image)
         bild.visibility = View.INVISIBLE
         // TODO rufe die Methode calculateBirthday mit den richtigen Variablen auf und speichere
@@ -61,6 +62,7 @@ class MainActivity : AppCompatActivity() {
 
         if (differenz == 0){
             bild.visibility = View.VISIBLE
+            output.text = "Du hast heute Geburtstag. Herzlichen Glückwunsch!"
         } else{
             bild.visibility = View.INVISIBLE
         }
